@@ -1,0 +1,113 @@
+body {
+    background-color: rgb(0, 150, 150);
+    /*background-image: url(/img/blackmamba.png);*/
+}
+
+div.caption {
+    text-align: center;
+}
+
+div.jumbotron   {
+    text-align: center;
+}
+
+.btn    {
+    border-radius: 0px;
+}
+
+.btn-primary    {
+    border-width: 2px;   
+}
+
+.navbar-wrapper {
+  /*position: absolute;*/
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+
+}
+
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+.sub_background {
+    background-color: rgba(206, 206, 206, .5);
+}
+
+.thumbnail  {
+    border-radius: 0px;
+}
+.jumbotron  {
+    background-color: rgba(232, 233, 243, .5);
+}
+
+
+ .navbar-wrapper {
+    margin-top: 20px;
+  }
+
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+    opacity: .7;
+  }
+
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+    } 
+
+
+    /*EXPERIMENT*/
+
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+
