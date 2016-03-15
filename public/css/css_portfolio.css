@@ -1,6 +1,16 @@
 body {
-    background-color: rgb(0, 150, 150);
+    background-color: rgb(104, 151, 196);
     /*background-image: url(/img/blackmamba.png);*/
+}
+.navbar-brand img {
+    height: 35px;
+    width: 70px;
+}
+
+.thumbnail {
+    border-width: 0px;
+    border-color: rgba(0, 0, 0, .3);
+
 }
 
 div.caption {
@@ -41,14 +51,11 @@ div.jumbotron   {
 }
 
 .sub_background {
-    background-color: rgba(206, 206, 206, .5);
+    background-color: rgb(104, 151, 196);   
 }
 
-.thumbnail  {
-    border-radius: 0px;
-}
 .jumbotron  {
-    background-color: rgba(232, 233, 243, .5);
+    background-color: rgb(104, 151, 196);
 }
 
 
