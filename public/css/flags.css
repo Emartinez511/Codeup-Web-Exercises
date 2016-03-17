@@ -1,0 +1,61 @@
+
+/*USA FLAG*/
+.us_flag   {
+    width: 400px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    position: relative;
+}
+
+.blue_us    {
+    width: 180px;
+    height: 120px;
+    background-color: blue;
+    padding: 0;
+    position: absolute;
+}
+
+.us_stars   {
+    color: white;
+    font-size: 9px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 9px;
+}
+.stripes    {
+    width: 400px;
+    height: 20px;
+    background-color: red;
+    color: red;
+}
+
+.redstripes_us {
+    background-color: red;
+    color: red;
+    margin: 0;
+}
+
+.whitestripes_us {
+    background-color: white;
+}
+
+
+/*JAPAN FLAG*/
+
+.japan  {
+    width: 400px;
+    height: 200px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+}
+
+.japan_circle   {
+    border-radius:50%;  
+    background-color: red;
+    color: red;
+    width: 130px;
+    height: 130px;
+    margin: 35px 30px 0px 130px;
+}
