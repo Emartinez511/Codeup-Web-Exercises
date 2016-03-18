@@ -59,3 +59,102 @@
     height: 130px;
     margin: 35px 30px 0px 130px;
 }
+
+/*PUERTO RICO*/
+
+.puerto_rico    {
+    width: 400px;
+    height: 200px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+}
+
+.pr_triangle    {
+    width: 0; 
+    height: 0; 
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 160px solid blue;
+    position: absolute;
+    
+} 
+
+.pr_star    {
+    position: absolute;
+    text-align: center;
+    margin: -60px 0 0 -150px ;
+    font-size: 80px;
+    color: white;
+
+
+    
+}
+
+.pr_stripes    {
+    width: 400px;
+    height: 20px;
+/*    background-color: red;
+    color: red;*/
+    position: absolute;
+
+}
+
+.redstripes_pr {
+    background-color: red;
+    color: red;
+    margin:  0;
+    height: 40px
+}
+
+.whitestripes_pr {
+    background-color: white;
+    /*margin: 0;*/
+    height: 7.8px;
+}
+
+/*SCOTLAND*/
+.scotland { 
+    width: 400px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    background-color: white;
+    
+}
+
+.left_triangle_sc {
+    width: 0; 
+    height: 0; 
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    border-left: 160px solid #0072C5;
+    margin: 20px 0 0 0;
+}
+
+.right_triangle_sc {
+    width: 0; 
+    height: 0; 
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    border-right: 160px solid #0072C5;
+    margin: -160px 0 0 240px;
+}
+
+.top_triangle_sc {
+    width: 0; 
+    height: 0; 
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-top: 80px solid #0072C5;
+    margin: -180px 0 0 40px;
+}
+
+.bottom_triangle_sc {
+    width: 0; 
+    height: 0; 
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 80px solid #0072C5;
+    margin: 40px 0 0 40px;
+}
