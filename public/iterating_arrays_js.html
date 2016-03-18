@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline JS</title>
+</head>
+<body>
+    <script>
+
+
+    (function () {
+    "use strict";
+    
+    var names = ["Ben", "Isaac", "Bobby", "Will"];
+
+    for (var i = 0; i < names.length; i++) {
+        console.log('The name ' + names[i] + ', using a forLoop');
+    };
+
+    names.forEach(function(elements) {
+    console.log('The name ' + elements + ', using a forEach Loop.');
+    });
+    })();
+
+
+// todo:
+// Create a log statement that will log the number of elements in the names array.
+
+// todo:
+// Create log statements that will print each of the names array elements individually.
+
+    </script>
+</body>
+</html>
