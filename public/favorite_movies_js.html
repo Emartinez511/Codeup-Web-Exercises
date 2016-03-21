@@ -7,22 +7,51 @@
     <script>
     (function() { 
     "use strict";
-    var movies = ["Resovior Dogs", "Pulp Fiction", "Kill Bill vol. 1", "Kill Bill vol. 2", "Jackie Brown", "Django Unchained", "Inglorious Basterds", "The Hateful Eight", "Death Proof"]
 
-    movies.forEach(function (element, index, array) {
-        if (index == 0) {
-            console.log(element + " is my favorite movie!");
-        } else {
-            console.log(element);
-        }
-        });
+    var favoriteMovies = [
+        "Reservoir Dogs",
+        "Pulp Fiction", 
+        "Kill Bill vol. 1", 
+        "Kill Bill vol. 2", 
+        "Jackie Brown", 
+        "Django Unchained", 
+        "Inglorious Basterds", 
+        "The Hateful Eight", 
+        "Death Proof"
+    ]
+    console.log(favoriteMovies);
 
-        })();
+    // Sort your favorite movies alphabetically
+    favoriteMovies.sort()
+    console.log(favoriteMovies);
+    
+// Use .indexOf() to find your number one favorite movie
+    console.log(favoriteMovies.indexOf("Reservoir Dogs"));
 
+// Use .splice() to take that movie out of the array
+    favoriteMovies.splice(7,1);
+    console.log(favoriteMovies);
 
-     // element is the shape name
-    // index is the iterator
-    // array is the shapes array itself
+// Put your favorite movie back in at the start of the array
+    favoriteMovies.splice(0,0, "Reservoir Dogs");
+    console.log(favoriteMovies);
+
+// Repeat the above steps for your least favorite movie; put it at the end
+    favoriteMovies.splice(  8,1);
+    console.log(favoriteMovies);
+
+    favoriteMovies.splice(8, 0, "The Hateful Eight")
+    console.log(favoriteMovies)
+ 
+
+// Create a function to console.log() your favorite movies.
+    // DO NOT VIOLATE SCOPE! Pass your favoriteMovies array in as a parameter
+    // Your function should output:
+    // "My all time favorite movie is [your favorite movie here]"
+    // "My least favorite movie is [your least favorite movie here]"
+    // "Some other movies are [the rest of the movies array with comma space between them]"
+    // You should not output any movies twice.
+    })();
     </script>
 </body>
 </html>
