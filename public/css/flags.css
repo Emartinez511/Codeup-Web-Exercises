@@ -95,8 +95,6 @@
 .pr_stripes    {
     width: 400px;
     height: 20px;
-/*    background-color: red;
-    color: red;*/
     position: absolute;
 
 }
@@ -115,6 +113,7 @@
 }
 
 /*SCOTLAND*/
+
 .scotland { 
     width: 400px;
     border: 1px solid #ddd;
@@ -158,3 +157,275 @@
     border-bottom: 80px solid #0072C5;
     margin: 40px 0 0 40px;
 }
+
+.saint_lucia { 
+    width: 400px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    background-color: #6CF;
+    padding: 0 0 20px 0;
+}
+
+.white_tri_sl {
+    width: 0; 
+    height: 0; 
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 140px solid White;
+    margin: 30px 0 0 120px;
+
+}
+
+.black_tri_sl   {
+    width: 0; 
+    height: 0; 
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 120px solid black ;
+    margin: 50px  0 0 130px;
+    float: left;  
+}
+
+
+.yellow_tri_sl   {
+     width: 0; 
+    height: 0; 
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid #FC0 ;
+    margin: -70px  140px 0 0;
+    float: right;  
+}
+
+/*CONGO FLAG*/
+
+.congo { 
+    height: 170px;
+    width: 400px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    background-color: #CE1021;
+    padding: 0 0 20px 0;
+  
+}
+
+.yellow_congo   {
+    border-left: 0px solid transparent;
+    border-right: 400px solid transparent;
+    border-top: 150px solid #F7D618;
+}
+
+.yellow_bottom_congo {
+    border-right: 0px solid transparent;
+    border-left: 400px solid transparent;
+    border-bottom: 150px solid #F7D618;
+    margin: -110px 0 0 0;
+
+}
+
+.blue_top_congo   {
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 365px solid transparent;
+    border-top: 135px solid #00A3DD;
+    margin: -190px 0 0 0;
+}
+
+.blue_bottom_congo   {
+    width: 0;
+    height: 0;
+    border-right: 0px solid transparent;
+    border-left: 365px solid transparent;
+    border-bottom: 135px solid #00A3DD;
+    margin: -80px 0 0 35px;
+}
+
+.congo_star {
+    text-align: center;
+    margin: -145px 0 0 20px ;
+    font-size: 80px;
+    color: #F7D618;
+}
+
+/*ENGLISH FLAG*/
+
+.england    {
+    height: 170px;
+    width: 400px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    background-color: white;
+    padding: 0 0 20px 0;
+}
+
+.england_cross1 {
+    background-color: red;
+    height: 30px;
+    width: 400px;
+    margin: 80px 0 0 0;
+}
+
+.england_cross2 {
+    background-color: red;
+    height: 190px;
+    width: 30px;
+    margin: -110px 0 0 180px ;
+}
+
+.england_topL_red   {
+    width: 0; 
+    height: 0; 
+    border-left: 0px solid transparent;
+    border-right: 140px solid transparent;
+    border-bottom: 70px solid red;
+    margin: -190px 0 0 0;
+
+}
+.england_topR_red   {
+    width: 0; 
+    height: 0; 
+    border-left: 140px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 70px solid red;
+    margin: -190px 0 0 260px;
+}
+
+.england_bottomR_red   {
+    width: 0; 
+    height: 0; 
+    border-left: 140px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 70px solid red;
+    margin: 50px 0 0 260px;
+
+}
+
+.england_bottomL_red    {
+    width: 0; 
+    height: 0; 
+    border-left: px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 70px solid red;
+    margin: 50px 0 0 0px;
+    position: absolute;
+}
+
+.england_bottomL_white  {
+    width: 0; 
+    height: 0; 
+    border-left: 0px solid transparent;
+    border-right: 110px solid transparent;
+    border-top: 53px solid white;
+    margin: 50px 0 0 0px;
+    position: absolute;
+}
+
+.england_topR_white  {
+    width: 0; 
+    height: 0; 
+    border-left: 110px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 53px solid white;
+    margin: -53px 0 0 290px;
+}
+
+.england_bottomR_white   {
+    width: 0; 
+    height: 0; 
+    border-left: 110px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 53px solid white;
+    margin: 50px 0 0 290px;
+    position: absolute;
+
+}
+.england_topL_white   {
+    width: 0; 
+    height: 0; 
+    border-left: 0px solid transparent;
+    border-right: 110px solid transparent;
+    border-bottom: 53px solid white;
+    margin: -53px 0 0 0px;
+}
+
+
+.england_bottomL_blue  {
+    width: 0; 
+    height: 0; 
+    border-left: 0px solid transparent;
+    border-right: 95px solid transparent;
+    border-top: 43px solid blue;
+    margin: 50px 0 0 0px;
+    position: absolute;
+}
+
+.england_topR_blue  {
+    width: 0; 
+    height: 0; 
+    border-left: 95px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 45px solid blue;
+    margin: -45px 0 0 305px;
+}
+
+.england_bottomR_blue   {
+    width: 0; 
+    height: 0; 
+    border-left: 95px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 45px solid blue;
+    margin: 50px 0 0 305px;
+    position: absolute;
+
+}
+
+.england_topL_blue   {
+    width: 0; 
+    height: 0; 
+    border-left: 0px solid transparent;
+    border-right: 95px solid transparent;
+    border-bottom: 45px solid blue;
+    margin: -45px 0 0 0px;
+}
+
+.england_topCR_blue {
+    width: 0; 
+    height: 0; 
+    border-left: px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 70px solid blue;
+    margin: -70px 0 0 220px;
+    position: absolute;
+}
+.england_topCL_blue {
+    width: 0; 
+    height: 0; 
+    border-left: 140px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 70px solid blue;
+    margin: -70px 0 0 30px;
+
+}
+.england_bottomCR_blue  {
+    width: 0; 
+    height: 0; 
+    border-left: 0px solid transparent;
+    border-right: 140px solid transparent;
+    border-bottom: 70px solid blue;
+    margin: 50px 0 0 220px;
+
+}
+.england_bottomCL_blue  {
+    width: 0; 
+    height: 0; 
+    border-left: 140px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 70px solid blue;
+    margin: -70px 0 0 30px;
+}
+
+#container  {
+    overflow: hidden;
+}
+
