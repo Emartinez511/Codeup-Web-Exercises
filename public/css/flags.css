@@ -257,6 +257,7 @@
     margin: 0 auto;
     background-color: white;
     padding: 0 0 20px 0;
+    overflow: hidden;
 }
 
 .england_cross1 {
@@ -280,15 +281,16 @@
     border-right: 140px solid transparent;
     border-bottom: 70px solid red;
     margin: -190px 0 0 0;
-
+    overflow: hidden;
 }
 .england_topR_red   {
     width: 0; 
     height: 0; 
-    border-left: 140px solid transparent;
+    border-left: 160px solid transparent;
     border-right: 0px solid transparent;
-    border-bottom: 70px solid red;
-    margin: -190px 0 0 260px;
+    border-bottom: 80px solid red;
+    margin:  -200px 0 0 240px;
+    overflow: hidden;
 }
 
 .england_bottomR_red   {
@@ -297,26 +299,28 @@
     border-left: 140px solid transparent;
     border-right: 0px solid transparent;
     border-top: 70px solid red;
-    margin: 50px 0 0 260px;
+    margin: -80px 0 0 260px;
 
 }
 
 .england_bottomL_red    {
     width: 0; 
-    height: 0; 
+    height: 0;
+    overflow: hidden;
     border-left: px solid transparent;
-    border-right: 140px solid transparent;
-    border-top: 70px solid red;
+    border-right: 160px solid transparent;
+    border-top: 80px solid red;
     margin: 50px 0 0 0px;
-    position: absolute;
+    overflow: hidden;
+    /*position: absolute;*/
 }
 
 .england_bottomL_white  {
     width: 0; 
     height: 0; 
     border-left: 0px solid transparent;
-    border-right: 110px solid transparent;
-    border-top: 53px solid white;
+    border-right: 130px solid transparent;
+    border-top: 63px solid white;
     margin: 50px 0 0 0px;
     position: absolute;
 }
@@ -324,10 +328,10 @@
 .england_topR_white  {
     width: 0; 
     height: 0; 
-    border-left: 110px solid transparent;
+    border-left: 130px solid transparent;
     border-right: 0px solid transparent;
-    border-bottom: 53px solid white;
-    margin: -53px 0 0 290px;
+    border-bottom: 63px solid white;
+    margin: -63px 0 0 270px;
 }
 
 .england_bottomR_white   {
@@ -336,8 +340,8 @@
     border-left: 110px solid transparent;
     border-right: 0px solid transparent;
     border-top: 53px solid white;
-    margin: 50px 0 0 290px;
-    position: absolute;
+    margin: 50px 0 0 291px;
+    /*position: absolute;*/
 
 }
 .england_topL_white   {
@@ -346,7 +350,7 @@
     border-left: 0px solid transparent;
     border-right: 110px solid transparent;
     border-bottom: 53px solid white;
-    margin: -53px 0 0 0px;
+    margin: -156px 0 0 0px;
 }
 
 
@@ -366,7 +370,7 @@
     border-left: 95px solid transparent;
     border-right: 0px solid transparent;
     border-bottom: 45px solid blue;
-    margin: -45px 0 0 305px;
+    margin: -47px 0 0 305px;
 }
 
 .england_bottomR_blue   {
@@ -396,7 +400,6 @@
     border-right: 140px solid transparent;
     border-top: 70px solid blue;
     margin: -70px 0 0 220px;
-    position: absolute;
 }
 .england_topCL_blue {
     width: 0; 
@@ -413,7 +416,7 @@
     border-left: 0px solid transparent;
     border-right: 140px solid transparent;
     border-bottom: 70px solid blue;
-    margin: 50px 0 0 220px;
+    margin: 55px 0 0 220px;
 
 }
 .england_bottomCL_blue  {
