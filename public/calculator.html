@@ -7,7 +7,8 @@
 </head>
 <body>
 <div class="bmo_body"></div>
-<div class="bmo_face">
+<div class="bmo_face_off">Press Blue Button To Start!</div>
+<div class="bmo_face" id="toggleText" style="display: none">
 <h1 id="main_header">Calculator</h1>
     <input type="text" id="input_a" class="calculator_field" value="" readonly>
     <input type="text" id="input_op" class="calculator_field" value="" readonly>
@@ -35,9 +36,9 @@
     <div>
         <button class="cal_buttons" id="clear">C</button>
         <button class="cal_buttons" id="0" value="0">0</button>
-        <button class="cal_buttons" id="'.'" value=".">.</button>
+        <button class="cal_buttons" id="decimal" value=".">.</button>
         <button class="cal_buttons_op" id="/" value="/">/</button>
-        <button class="cal_buttons_equal" id="=" >=</button>
+        <button class="cal_buttons_equal" id="equalsSign" >=</button>
         <button class="cal_buttons_op" id="'sqrt'" value="sqrt">sqrt</button>
         <button class="cal_buttons_op" id="binary" value="binary">to binary</button>
         <button class="cal_buttons_op" id="toDecimal" value="toDecimal">to decimal</button>
@@ -48,7 +49,7 @@
 </div>
 </div>
 <div id="bmo_slot"></div>
-<div id="bmo_round_button"></div>
+<button id="bmo_round_button"></button>
 <div id="bmo_round_green"></div>
 <div id="cross"></div>
 <div id="triangle-up"></div>

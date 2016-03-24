@@ -3,47 +3,59 @@ body {
     background-size:cover;
 }
 
-button  {
-    font-family: 'Press Start 2P', cursive;
-    width: 6em;
-    height: 3em;
+button {
     background-color: transparent;
     border-width: 0;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    font-family: 'Press Start 2P', cursive;
+    height: 3em;
     transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    width: 6em;
 
 }
 
-button:hover    {
+button:hover {
     background-color: black; /* Green */
     color: white;
 }
 
-.bmo_body   {
+.bmo_body {
     background-color: #59B09F;
-    border-radius: 25px;
     border: 2px solid black;
+    border-radius: 25px;
     height: 500px;
-    width: 400px;
     margin: 0 auto;
     position: absolute;
+    width: 400px;
 
 }
 
-.bmo_face   {
+.bmo_face {
     background-color: #B9DFCA;
     border: 2px solid black;
     border-radius: 20px;
     font-family: 'Press Start 2P', cursive;    
     height: 320px;
-    margin: 0 auto;
     margin: 10px 0 0 20px;
     position: absolute;
     text-align: center;
     width: 360px;
 }
 
-#input_a, #input_b   {
+.bmo_face_off {
+    background-color: #B9DFCA;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-family: 'Press Start 2P', cursive;    
+    height: 320px;
+    margin: 10px 0 0 20px;
+    position: absolute;
+    text-align: center;
+    width: 360px;
+    font-size: 30px;
+}
+
+#input_a, #input_b {
     background-color: transparent;
     border-width: 0;
     font-family: 'Press Start 2P', cursive; 
@@ -52,7 +64,7 @@ button:hover    {
     width: 6em;
 } 
 
-#input_op  {
+#input_op {
     background-color: transparent;
     border-width: 0;
     font-family: 'Press Start 2P', cursive; 
@@ -65,78 +77,75 @@ button:hover    {
 
 /*LOWER BODY*/
 
-#bmo_round_green   {
-    width: 20px;
-    height: 20px;
+#bmo_round_green {
     background: #16F935;
+    border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    border-radius: 50px;
+    height: 20px;
     margin: 410px 0 0 320px;
     position: absolute;
+    width: 20px;
 }
 
-#bmo_round_button   {
-    width: 30px;
-    height: 30px;
+#bmo_round_button {
     background: blue;
+    border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    border-radius: 50px;
+    height: 30px;
     margin: 350px 0 0 320px;
     position: absolute;
+    width: 30px;
 }
 
-#bmo_round_red   {
-    width: 50px;
-    height: 50px;
+#bmo_round_red {
     background: red;
+    border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    border-radius: 50px;
+    height: 50px;
     margin: 430px 0 0 240px;
     position: absolute;
+    width: 50px;
 }
 
-#bmo_slot   {
-    height: 10px;
-    width: 150px;
-    border: 2px solid  black;
-    margin: 0 auto;
+#bmo_slot {
     background-color: #0E3D29;
     border-radius: 20px;
+    height: 10px;
+    border: 2px solid  black;
     margin:350px 0 0 25px;
     position: absolute;
+    width: 150px;
 }
 
-#bmo_slot2   {
-    height: 10px;
-    width: 50px;
-    border: 2px solid  black;
-    margin: 0 auto;
+#bmo_slot2 {
     background-color: #304292;
+    border: 2px solid  black;
     border-radius: 20px;
+    height: 10px;
     margin:460px 0 0 25px;
     position: absolute;
+    width: 50px;
 }
 
-#bmo_slot3   {
-    height: 10px;
-    width: 50px;
-    border: 2px solid  black;
-    margin: 0 auto;
+#bmo_slot3 {
     background-color: #304292;
+    border: 2px solid  black;
     border-radius: 20px;
+    height: 10px;
     margin:460px 0 0 100px;
     position: absolute;
+    width: 50px;
 }
 
 #cross {
   background: #EED701;
   height: 50px;
+  margin: 390px 0 0 40px;
   position: absolute;
   width: 20px;
-  margin: 390px 0 0 40px;
 
 }
 
@@ -151,12 +160,12 @@ button:hover    {
 }
 
 #triangle-up {
-    width: 0;
-    height: 0;
+    border-bottom: 30px solid #44C0DF;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 30px solid #44C0DF;
+    height: 0;
     margin: 380px 0 0 250px;
     position: absolute;
+    width: 0;
 }
 

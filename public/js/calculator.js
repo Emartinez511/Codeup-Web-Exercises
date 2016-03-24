@@ -1,11 +1,11 @@
 (function(){
 "use strict"
-    var leftInput = "";
-    var rightInput = "";
-    var opInput = "";
+    var leftInput = document.getElementById('input_a').value;
+    var rightInput = document.getElementById('input_b').value;
+    var opInput = document.getElementById('input_op').value;
     var totalInput = "0";
 
-    var Clear = function (event) {
+    var clear = function (event) {
         rightInput = "";
         document.getElementById('input_b').value = rightInput;
         leftInput = "";
@@ -14,7 +14,7 @@
         document.getElementById('input_op').value = opInput;
     }
 
-    var Equal = function (event)  {
+    var equal = function (event)  {
         switch (opInput){
             case "+":
                 totalInput = parseFloat(leftInput) + parseFloat(rightInput);
@@ -44,39 +44,44 @@
                 totalInput = parseInt(leftInput).toString(16);
                 break;
         }
-                document.getElementById('input_a').value = totalInput;
-                document.getElementById('input_op').value = "";
-                document.getElementById('input_b').value = "";
+            document.getElementById('input_a').value = totalInput;
+            document.getElementById('input_op').value = "";
+            document.getElementById('input_b').value = "";
+            rightInput = "";
+            leftInput = totalInput;
+        
+    }
+
+    var header = function (event) {
+        document.getElementById('main_header').innerHTML = "Algebraic!";
     }
 
     var inputFirst = function (event) {      
-
         if (opInput !== "") {
-                rightInput = rightInput + this.value;
-                document.getElementById('input_b').value = rightInput;
-            } else {
-                leftInput = leftInput + this.value;
-                document.getElementById('input_a').value = leftInput;
-                }
+            rightInput = rightInput + this.value;
+            document.getElementById('input_b').value = rightInput;
+        } else {
+            leftInput = leftInput + this.value;
+            document.getElementById('input_a').value = leftInput;
+        }
     }
             
-    var Header = function (event) {
-                document.getElementById('main_header').innerHTML = "Algebraic!";
-
-            }    
-
-
-    var Operator = function(event) {
-            opInput = this.value;
-            document.getElementById('input_op').value = opInput;
+    function toggle() {
+        var ele = document.getElementById("toggleText");
+        var text = document.getElementById("bmo_round_button");
+            if(ele.style.display == "block") {
+                ele.style.display = "none";
+                text.innerHTML = "ON";
+            } else {
+                ele.style.display = "block";
+                text.innerHTML = "OFF";
             }
+    } 
 
-// --------OPERATOR EVENT LISTENER
 
-    var opButtons = document.getElementsByClassName('cal_buttons_op');
-
-    for (var i = 0; i < opButtons.length; i++) {
-        opButtons[i].addEventListener('click', Operator, false);
+    var operator = function(event) {
+        opInput = this.value;
+        document.getElementById('input_op').value = opInput;
     }
 
 // ----------NUMBERS EVENT LISTENER--------
@@ -86,13 +91,24 @@
     for (var i = 0; i < numButtons.length; i++) {
         numButtons[i].addEventListener('click', inputFirst, false);
     }
-    
-// ----------CLEAR EVENT LISTENER
 
-    document.getElementById('clear').addEventListener('click', Clear, false);
-    document.getElementById('=').addEventListener('click', Equal, false)
-    document.getElementById('=').addEventListener('mouseover', Header, false)
-    document.getElementById('toHex').addEventListener('click', Equal, false)
-   
+// --------OPERATOR EVENT LISTENER
+
+    var opButtons = document.getElementsByClassName('cal_buttons_op');
+
+    for (var i = 0; i < opButtons.length; i++) {
+        opButtons[i].addEventListener('click', operator, false);
+    }
+
+    
+// -------- EVENT LISTENERS
+    document.getElementById('bmo_round_button').addEventListener('click', toggle);
+    document.getElementById('equalsSign').addEventListener('click', equal);
+    document.getElementById('equalsSign').addEventListener('mouseover', header);
+    document.getElementById('clear').addEventListener('click', clear);
+    document.getElementById('binary').addEventListener('click', equal);
+    document.getElementById('toDecimal').addEventListener('click', equal);
+    document.getElementById('toHex').addEventListener('click', equal);
+
 
 })();
