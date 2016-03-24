@@ -20,7 +20,7 @@ button:hover {
 }
 
 .bmo_body {
-    background-color: #59B09F;
+    background-color: #2ABEB2;
     border: 2px solid black;
     border-radius: 25px;
     height: 500px;
@@ -47,12 +47,13 @@ button:hover {
     border: 2px solid black;
     border-radius: 20px;
     font-family: 'Press Start 2P', cursive;    
-    height: 320px;
+    height: 240px;
     margin: 10px 0 0 20px;
     position: absolute;
     text-align: center;
     width: 360px;
     font-size: 30px;
+    padding-top: 80px;
 }
 
 #input_a, #input_b {
@@ -89,7 +90,7 @@ button:hover {
 }
 
 #bmo_round_button {
-    background: blue;
+    background: #0A558E;
     border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
@@ -100,7 +101,7 @@ button:hover {
 }
 
 #bmo_round_red {
-    background: red;
+    background: #FF394C;
     border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;

@@ -71,10 +71,10 @@
         var text = document.getElementById("bmo_round_button");
             if(ele.style.display == "block") {
                 ele.style.display = "none";
-                text.innerHTML = "ON";
+                text.innerHTML = "OFF";
             } else {
                 ele.style.display = "block";
-                text.innerHTML = "OFF";
+                text.innerHTML = "ON";
             }
     } 
 
