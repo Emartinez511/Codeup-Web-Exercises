@@ -1,0 +1,161 @@
+body {
+    background-image: url(/img/adventure.jpg);
+    background-size:cover;
+}
+
+button  {
+    font-family: 'Press Start 2P', cursive;
+    width: 6em;
+    height: 3em;
+    background-color: transparent;
+    border-width: 0;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+}
+
+button:hover    {
+    background-color: black; /* Green */
+    color: white;
+}
+
+.bmo_body   {
+    background-color: #59B09F;
+    border-radius: 25px;
+    border: 2px solid black;
+    height: 500px;
+    width: 400px;
+    margin: 0 auto;
+    position: absolute;
+
+}
+
+.bmo_face   {
+    background-color: #B9DFCA;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-family: 'Press Start 2P', cursive;    
+    height: 320px;
+    margin: 0 auto;
+    margin: 10px 0 0 20px;
+    position: absolute;
+    text-align: center;
+    width: 350px;
+}
+
+#input_a, #input_b   {
+    background-color: transparent;
+    border-width: 0;
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 15px;
+    height: 3em;
+    width: 5em;
+} 
+
+#input_op  {
+    background-color: transparent;
+    border-width: 0;
+    font-family: 'Press Start 2P', cursive; 
+    height: 3em;
+    width: 2em;
+}
+
+
+
+
+/*LOWER BODY*/
+
+#bmo_round_green   {
+    width: 20px;
+    height: 20px;
+    background: #16F935;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin: 410px 0 0 320px;
+    position: absolute;
+}
+
+#bmo_round_button   {
+    width: 30px;
+    height: 30px;
+    background: blue;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin: 350px 0 0 320px;
+    position: absolute;
+}
+
+#bmo_round_red   {
+    width: 50px;
+    height: 50px;
+    background: red;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin: 430px 0 0 240px;
+    position: absolute;
+}
+
+#bmo_slot   {
+    height: 10px;
+    width: 150px;
+    border: 2px solid  black;
+    margin: 0 auto;
+    background-color: #0E3D29;
+    border-radius: 20px;
+    margin:350px 0 0 25px;
+    position: absolute;
+}
+
+#bmo_slot2   {
+    height: 10px;
+    width: 50px;
+    border: 2px solid  black;
+    margin: 0 auto;
+    background-color: #304292;
+    border-radius: 20px;
+    margin:460px 0 0 25px;
+    position: absolute;
+}
+
+#bmo_slot3   {
+    height: 10px;
+    width: 50px;
+    border: 2px solid  black;
+    margin: 0 auto;
+    background-color: #304292;
+    border-radius: 20px;
+    margin:460px 0 0 100px;
+    position: absolute;
+}
+
+#cross {
+  background: #EED701;
+  height: 50px;
+  position: absolute;
+  width: 20px;
+  margin: 390px 0 0 40px;
+
+}
+
+#cross:after {
+  background: #EED701;
+  content: "";
+  height: 20px;
+  left: -15px;
+  position: absolute;
+  top: 15px;
+  width: 50px;
+}
+
+#triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #44C0DF;
+    margin: 380px 0 0 250px;
+    position: absolute;
+}

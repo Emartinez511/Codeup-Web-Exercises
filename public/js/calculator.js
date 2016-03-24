@@ -30,29 +30,40 @@
     var Equal = function (event)  {
         switch (opInput){
             case "+":
-                totalInput = parseInt(leftInput) + parseInt(rightInput);
+                totalInput = parseFloat(leftInput) + parseFloat(rightInput);
                 document.getElementById('input_a').value = totalInput;
                 document.getElementById('input_op').value = "";
                 document.getElementById('input_b').value = "";
                 break; 
             case "-":
-                totalInput = parseInt(leftInput) - parseInt(rightInput);
+                totalInput = parseFloat(leftInput) - parseFloat(rightInput);
                 document.getElementById('input_a').value = totalInput;
                 document.getElementById('input_op').value = "";
                 document.getElementById('input_b').value = "";
                 break;
             case "*":        
-                 totalInput = parseInt(leftInput) * parseInt(rightInput);
+                 totalInput = parseFloat(leftInput) * parseFloat(rightInput);
                 document.getElementById('input_a').value = totalInput;
                 document.getElementById('input_op').value = "";
                 document.getElementById('input_b').value = "";
                 break;
             case "/":
-                totalInput = parseInt(leftInput) / parseInt(rightInput);
+                totalInput = parseFloat(leftInput) / parseFloat(rightInput);
                 document.getElementById('input_a').value = totalInput;
                 document.getElementById('input_op').value = "";
                 document.getElementById('input_b').value = "";
                 break;
+            case "sqrt":
+                totalInput = Math.sqrt(leftInput)*1;
+                document.getElementById('input_a').value = totalInput;
+                document.getElementById('input_op').value = "";
+                break;
+            case "^":
+                totalInput = Math.pow(leftInput, rightInput);
+                document.getElementById('input_a').value = totalInput;
+                document.getElementById('input_op').value = "";
+                document.getElementById('input_b').value = "";
+                break;    
         }
             
     }
