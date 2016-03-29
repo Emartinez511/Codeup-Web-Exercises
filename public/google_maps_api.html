@@ -20,39 +20,47 @@
     (function() {
         "use strict";
 
-var mapOptions = {
-    // Set the zoom level
-    zoom: 20, 
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 20, 
 
-};
+        };
+        
 
-// Set our address to geocode
-var address = "5703 Evers Rd, San Antonio, TX 78238";
+        // Set our address to geocode
+        var address = "5703 Evers Rd, San Antonio, TX 78238";
 
-// Init geocoder object
-var geocoder = new google.maps.Geocoder();
+        // Init geocoder object
+        var geocoder = new google.maps.Geocoder();
 
-// Geocode our address
-geocoder.geocode({ "address": address }, function(results, status) {
+        // Geocode our address
+        geocoder.geocode({ "address": address }, function(results, status) {
 
-   // Check for a successful result
-   if (status == google.maps.GeocoderStatus.OK) {
+           // Check for a successful result
+           if (status == google.maps.GeocoderStatus.OK) {
 
-       // Recenter the map over the address
-       map.setCenter(results[0].geometry.location);
-   } else {
+               // Recenter the map over the address
+               map.setCenter(results[0].geometry.location);
+           } else {
 
-       // Show an error message with the status if our request fails
-       alert("Geocoding was not successful - STATUS: " + status);
-   }
-});
+               // Show an error message with the status if our request fails
+               alert("Geocoding was not successful - STATUS: " + status);
+           }
+
+           
+            var piccolos = { lat: 29.489373, lng: -98.59804 };
+            var marker = new google.maps.Marker({
+                position: piccolos,
+                map: map
+            });
+
+        });
 
 
 
-
-        // Render the map
+                // Render the map
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-    })();
+            })();
     </script>
 </body>
 
