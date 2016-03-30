@@ -7,10 +7,23 @@
         "use strict";
 
         $(document).ready(function() {
+            
+            var $header = $('h1');
+            $header.click( function() {
+                $(this).css('background-color', 'yellow');
+            });
 
-        $('h1, p, li').css({
-            'background-color': 'yellow',
-        })
+            var $para = $('p');
+            $para.dblclick( function(){
+                $(this).css('font-size', '18px');
+            });
+
+            var $list = $('li');
+            $list.hover(function(){
+                $(this).css('color', 'red');
+            }, function(){
+                $(this).css('color', 'white');
+            })
 
         });
     </script>
