@@ -10,6 +10,9 @@
         dt {
             font-weight: bold;
         }
+
+
+
         
     </style>
 </head>
@@ -50,12 +53,39 @@
     </dl>
 
 </div>
-
+<div>
+    <h3>Arches</h3>
+    <ul id="national-parks">
+        <li>FACT #1</li>
+        <li>FACT #2</li>
+        <li>FACT #3</li>
+        <li>FACT #4</li>
+    </ul>
+    <h3>Badlands</h3>
+    <ul id="national-parks">
+        <li>FACT #1</li>
+        <li>FACT #2</li>
+        <li>FACT #3</li>
+        <li>FACT #4</li>
+    </ul>
+    <h3>Carlsbad Caverns</h3>
+    <ul id="national-parks">
+        <li>FACT #1</li>
+        <li>FACT #2</li>
+        <li>FACT #3</li>
+        <li>FACT #4</li>
+    </ul>
+</div>
     <!-- JQUERY Script -->
     <script src="/js/jquery.js"></script>
     <script>
         "use strict";
         $(document).ready(function(){
+
+
+            $('ul').each(function() {
+                $(this).children().first().css('font-weight', 'bold'); 
+            });
 
             var $title = $('.title');
 
@@ -64,6 +94,10 @@
                 $(this).next().closest('dd').toggleClass('invisible');
             });
 
+            $('li').click(function(event){
+                $(this).parent().addClass('invisible');
+
+            })
 
         });
     </script>
