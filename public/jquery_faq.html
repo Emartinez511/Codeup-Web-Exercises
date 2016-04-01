@@ -6,78 +6,68 @@
         .invisible {
             display: none;
         }
+
+        dt {
+            font-weight: bold;
+        }
         
     </style>
 </head>
 <body>
     <h1>10 FAQs about National Parks</h1>
 <div>
+
     <dl>
-      <dt>Pets</dt>
-      <dd class="invisible">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. 
+      <dt class="title">Can you bring Pets?</dt>
+      <dd class="invisible">As long as they are on a leash.</dd>
+
+      <dt class="title">Is Alcohol allowed?</dt>
+      <dd class="invisible">No, Alcohol is not permitted.</dd>
+
+      <dt class="title">Is Grilling allowed?</dt>
+      <dd class="invisible">No charcoal grills are allowed. </dd>
+
+      <dt class="title">Can you build a fire?</dt>
+      <dd class="invisible">Only in specified areas.</dd>
+
+      <dt class="title">Is Camping allowed?</dt>
+      <dd class="invisible">Yes, a permit is needed.
       </dd>
-      <dt>Alcohol</dt>
-      <dd class="invisible">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. 
-      </dd>
-      <dt>Grilling</dt>
-      <dd class="invisible">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. 
-      </dd>
-      <dt>Fires</dt>
-      <dd class="invisible">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. 
-      </dd>
-      <dt>Camping</dt>
-      <dd class="invisible">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. 
-      </dd>
-      <dt>Restrooms</dt>
-      <dd class="invisible">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. 
-      </dd>
-      <dt>Animal Life</dt>
-      <dd class="invisible">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. 
-      </dd>
-      <dt>Hours</dt>
-      <dd class="invisible">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. 
-      </dd>
-      <dt>Smoking</dt>
-      <dd class="invisible">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. 
-      </dd>
-      <dt>Firearms</dt>
-      <dd class="invisible">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. 
-      </dd>
+      <dt class="title">Are there restrooms available?</dt>
+      <dd class="invisible">Bathrooms are available.</dd>
+
+      <dt class="title">What if I enconter an Animal?</dt>
+      <dd class="invisible">Report any sightings of Animals to Park.</dd>
+
+      <dt class="title">what are the Hours of Operation?</dt>
+      <dd class="invisible">Varies by location.</dd>
+
+      <dt class="title">Is smoking allowed?</dt>
+      <dd class="invisible">No smoking is allowed.</dd>
+
+      <dt class="title">Are firearms allowed?</dt>
+      <dd class="invisible">Firearms are not allow.</dd>
     </dl>
+
 </div>
-<a href="#" id="click">Click to show/hide definitions.</a>
-    
 
-
+    <!-- JQUERY Script -->
     <script src="/js/jquery.js"></script>
     <script>
         "use strict";
         $(document).ready(function(){
-            $('#click').click(function(event) {
+
+            var $title = $('.title');
+
+            $title.click(function(event){
                 event.preventDefault();
-                $('dd').toggleClass('invisible');
+                $(this).next().closest('dd').toggleClass('invisible');
             });
+
+
         });
     </script>
+
+
 </body>
 </html>
