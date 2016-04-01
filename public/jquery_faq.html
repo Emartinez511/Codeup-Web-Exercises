@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jquery_faq</title>
+    <style>
+        .invisible {
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>10 FAQs about National Parks</h1>
+<div>
+    <dl>
+      <dt>Pets</dt>
+      <dd class="invisible">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+      </dd>
+      <dt>Alcohol</dt>
+      <dd class="invisible">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+      </dd>
+      <dt>Grilling</dt>
+      <dd class="invisible">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+      </dd>
+      <dt>Fires</dt>
+      <dd class="invisible">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+      </dd>
+      <dt>Camping</dt>
+      <dd class="invisible">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+      </dd>
+      <dt>Restrooms</dt>
+      <dd class="invisible">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+      </dd>
+      <dt>Animal Life</dt>
+      <dd class="invisible">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+      </dd>
+      <dt>Hours</dt>
+      <dd class="invisible">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+      </dd>
+      <dt>Smoking</dt>
+      <dd class="invisible">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+      </dd>
+      <dt>Firearms</dt>
+      <dd class="invisible">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. 
+      </dd>
+    </dl>
+</div>
+<a href="#" id="click">Click to show/hide definitions.</a>
+    
+
+
+    <script src="/js/jquery.js"></script>
+    <script>
+        "use strict";
+        $(document).ready(function(){
+            $('#click').click(function(event) {
+                event.preventDefault();
+                $('dd').toggleClass('invisible');
+            });
+        });
+    </script>
+</body>
+</html>
