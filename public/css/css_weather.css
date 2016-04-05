@@ -1,0 +1,35 @@
+#map-canvas {
+    width: 770px;
+    height: 481px;
+}
+
+#day_1, #day_2, #day_3 {
+    width: 120px;
+    background-color: #F2F2F2;
+    font-size: 12px;
+    position: absolute;
+    text-align: center;
+}
+
+#main_temps {
+    font-weight: bold;
+}
+
+#day_1  {
+    margin-left: 20px;
+    height: 220px;
+}
+
+#day_2  {
+    margin-left: 160px;
+}
+
+#day_3  {
+    margin-left: 300px;
+}
+
+#long_lat   {
+    margin-left: 430px;
+}
+
+
