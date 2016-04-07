@@ -10,12 +10,7 @@
     <div id="map-canvas"></div>
     <div id="weather_info"></div>
     <div id="forecast_back"></div>
-    <div id="long_lat">
-        <div>
-            <input id="lat" type="text" value="29.423017"/>
-            <input id="long" type="text" value="-98.48527"/>
-        </div>
-    </div>
+    
 
 
 <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
@@ -27,31 +22,34 @@
 
         var geocoder;
         var map;
-        var myLatlng = new google.maps.LatLng($("#lat").val(), $("#long").val());
+        var myLatlng = new google.maps.LatLng(29.423017, -98.48527);
         var mapOptions = {
              zoom: 5,
             center: myLatlng
         };
+        var latValue = "29.423017";
+        var lngValue = "-98.48527";
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
         var marker = new google.maps.Marker({
             position: myLatlng,
             map: map,
+            animation: google.maps.Animation.DROP,
             draggable:true,
         });
         marker.setMap(map);
         google.maps.event.addListener(marker, 'dragend', function (event) {
-        document.getElementById("lat").value = this.getPosition().lat();
-        document.getElementById("long").value = this.getPosition().lng();
+
+            // change to use without lat and lng 
+            latValue = this.getPosition().lat();
+            lngValue = this.getPosition().lng();
         });
 
-// THIS IS THE BUTTTON FOR LAT AND LONG
+// THIS IS THE BUTTTON FOR RETRIEVING COORDINATES
 
     $("#button1").click(function () {
-        var $longitude = $("#long").val();
-        var $latitude = $("#lat").val()
-        var coordinates = "http://api.openweathermap.org/data/2.5/forecast?lat=" + $("#lat").val() + "&lon=" + $("#long").val(); 
-        var info = '';
         map.setCenter(marker.position);
+        var coordinates = "http://api.openweathermap.org/data/2.5/forecast?lat=" + latValue + "&lon=" + lngValue; 
+        var info = '';
         var weather = $.get(coordinates, {
             APPID: "988a5fd222f83e03ba0fbb954a54524a",
             units: "imperial"
@@ -61,11 +59,10 @@
 
         weather.done(function(data){
             $(data).each(function(i, temps){
-                info += '<div>';
                 info += '<h2 id="cityName">' + temps.city.name + ', ' + temps.city.country + '</h2>';
-                info += '</div>';
+
                 info += '<div id="day_1">';
-                info += '<p id="main_temps">' + temps.list[0].main.temp_max + 'F/' + temps.list[0].main.temp_min + 'F'+'</p>';
+                info += '<p id="main_temps">' + temps.list[0].main.temp_max + '&#8457/' + temps.list[0].main.temp_min + '&#8457'+'</p>';
                 info += '<p>' + '<strong>Weather: </strong>' + temps.list[0].weather[0].description + '</p>';
                 info += '<p>' + '<img src="http://openweathermap.org/img/w/' + temps.list[0].weather[0].icon + '.png" />'+'</p>';
                 info += '<p>' + 'Humidity: ' + temps.list[0].main.humidity + '</p>';
@@ -74,7 +71,7 @@
                 info += '</div>';
 
                 info += '<div id="day_2">';
-                info += '<p id="main_temps">' + temps.list[8].main.temp_max + 'F/' + temps.list[8].main.temp_min + 'F'+'</p>';
+                info += '<p id="main_temps">' + temps.list[8].main.temp_max + '&#8457/' + temps.list[8].main.temp_min + '&#8457'+'</p>';
                 info += '<p>' + '<strong>Weather: </strong>' + temps.list[8].weather[0].description + '</p>';
                 info += '<p>' + '<img src="http://openweathermap.org/img/w/' + temps.list[8].weather[0].icon + '.png" />'+'</p>';
                 info += '<p>' + 'Humidity: ' + temps.list[8].main.humidity + '</p>';
@@ -82,9 +79,8 @@
                 info += '<p>' + 'Pressure: ' + temps.list[8].main.pressure + '</p>';
                 info += '</div>';
 
-
                 info += '<div id="day_3">';
-                info += '<p id="main_temps">' + temps.list[16].main.temp_max + 'F/' + temps.list[16].main.temp_min + 'F'+'</p>';
+                info += '<p id="main_temps">' + temps.list[16].main.temp_max + '&#8457/' + temps.list[16].main.temp_min + '&#8457'+'</p>';
                 info += '<p>' + '<strong>Weather: </strong>' + temps.list[16].weather[0].description + '</p>';
                 info += '<p>' + '<img src="http://openweathermap.org/img/w/' + temps.list[16].weather[0].icon + '.png" />'+'</p>';
                 info += '<p>' + 'Humidity: ' + temps.list[16].main.humidity + '</p>';
