@@ -53,6 +53,7 @@
     </dl>
 
 </div>
+<h2>NATIONAL Parks</h2>
 <div>
     <h3>Arches</h3>
     <ul id="national-parks">
@@ -76,29 +77,29 @@
         <li>FACT #4</li>
     </ul>
 </div>
+
+
     <!-- JQUERY Script -->
     <script src="/js/jquery.js"></script>
     <script>
         "use strict";
         $(document).ready(function(){
 
+            var $title = $('.title');
+
+            $title.click(function(event){
+                $(this).next().closest('dd').slideToggle();
+            });
 
             $('ul').each(function() {
                 $(this).children().first().css('font-weight', 'bold'); 
             });
 
-            var $title = $('.title');
+            $('h3').click(function(event){
+                $(this).next().slide    Toggle('li');
 
-            $title.click(function(event){
-                event.preventDefault();
-                $(this).next().closest('dd').toggleClass('invisible');
             });
-
-            $('li').click(function(event){
-                $(this).parent().addClass('invisible');
-
-            })
-
+            
         });
     </script>
 

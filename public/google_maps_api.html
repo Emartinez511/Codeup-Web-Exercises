@@ -9,6 +9,7 @@
     </style>
 </head>
 <body>
+
     <!-- div to hold map -->
     <div id="map-canvas"></div>
 
@@ -20,71 +21,113 @@
     (function() {
         "use strict";
 
-        var mapOptions = {
+var mapOptions = {
             // Set the zoom level
-            zoom: 18, 
-
-        };
-        
-
-        // Set our address to geocode
-        var address = "5703 Evers Rd, San Antonio, TX 78238";
-
-        // Init geocoder object
-        var geocoder = new google.maps.Geocoder();
-
-        // Geocode our address
-        geocoder.geocode({ "address": address }, function(results, status) {
-
-           // Check for a successful result
-           if (status == google.maps.GeocoderStatus.OK) {
-
-               // Recenter the map over the address
-               map.setCenter(results[0].geometry.location);
-           } else {
-
-               // Show an error message with the status if our request fails
-               alert("Geocoding was not successful - STATUS: " + status);
-           }
-            
-        var secretMessages = "";
-        var piccolos = { lat: 29.489365, lng: -98.598065 };
-        var marker = new google.maps.Marker({
-                position: piccolos,
-                map: map,
-                animation: google.maps.Animation.DROP,  
-
-        });
-
-        marker.addListener('click', toggleBounce);
-
-        function toggleBounce() {
-            if (marker.getAnimation() !== null) {
-                marker.setAnimation(null);
-            } else {
-                marker.setAnimation(google.maps.Animation.BOUNCE);
-            }
+            zoom: 5,
         }
+var geocoder;
+var map;
 
-        attachSecretMessage(marker, secretMessages);
+function initialize() {
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-        function attachSecretMessage(marker, secretMessage) {
-          var infowindow = new google.maps.InfoWindow({
-            content: "Piccolo's Italian Restaurant"
-          });
+    var loc_lats = ["29.489365", "29.521039", "29.4442547", "29.6102622"];
+    var loc_longs = ["-98.598065", "-98.638996", "-98.4811944", "-98.4977782"];
+    var loc_description = [ "Piccolo's Italian Restaraunt", "Wing Stop", "La Gloria", "Chama Gaucha Brazilian Steakhouse"];
+    var i;
+    var bounds = new google.maps.LatLngBounds();
+    for (i = 0; i < loc_lats.length; i++) {
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(loc_lats[i], loc_longs[i])
+    });
 
-          marker.addListener('click', function() {
-            infowindow.open(marker.get('map'), marker);
-          });
-        }
+    bounds.extend(marker.getPosition());
+    marker.setMap(map);
 
-        });
+    var infowindow = new google.maps.InfoWindow({
+      content: loc_description[i]
+    });
 
-                // Render the map
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-            
+    marker.addListener('click', function() {
+            console.log(this.index); // this will give correct index
+            console.log(i); //this will always give 10 for you
+            infowindow.open(map, this);
+            // map.panTo(marker[this.index].getPosition());
+    });  
+    // google.maps.event.addListener(marker, 'click', function() {
+    //   infowindow.open(map, marker[this.index]);
+    // });
+
+    }
+  map.fitBounds(bounds);
+}
+google.maps.event.addDomListener(window, "load", initialize);
 
     })();
+
+
+
+
+
+        // // Set our address to geocode
+        // var address = "5703 Evers Rd, San Antonio, TX 78238";
+
+        // // Init geocoder object
+        // var geocoder = new google.maps.Geocoder();
+
+        // // Geocode our address
+        // geocoder.geocode({ "address": address }, function(results, status) {
+
+        //    // Check for a successful result
+        //    if (status == google.maps.GeocoderStatus.OK) {
+
+        //        // Recenter the map over the address
+        //        map.setCenter(results[0].geometry.location);
+        //    }    else {
+
+        //        // Show an error message with the status if our request fails
+        //         alert("Geocoding was not successful - STATUS: " + status);
+        //         }
+            
+        //     var secretMessages = "";
+        //     var piccolos = { lat: 29.489365, lng: -98.598065 };
+        //     var marker = new google.maps.Marker({
+        //         position: piccolos,
+        //         map: map,
+        //         animation: google.maps.Animation.DROP,
+        //         icon: '/img/spaghetti.png'  
+
+        //     });
+
+        //     marker.addListener('click', toggleBounce);
+
+        //     function toggleBounce() {
+        //         if (marker.getAnimation() !== null) {
+        //             marker.setAnimation(null);
+        //         }   else {
+        //                 marker.setAnimation(google.maps.Animation.BOUNCE);
+        //             }
+        //     }
+
+        //     attachSecretMessage(marker, secretMessages);
+
+        //     function attachSecretMessage(marker, secretMessage) {
+        //         var infowindow = new google.maps.InfoWindow({
+        //             content: "Piccolo's Italian Restaurant"
+        //         });
+
+                // marker.addListener('click', function() {
+        //             infowindow.open(marker.get('map'), marker);
+        //         });
+        //     }
+
+        // });
+
+        //         // Render the map
+        // var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+            
+
+    // })();
 
 
 

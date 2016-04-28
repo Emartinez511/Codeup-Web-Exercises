@@ -7,7 +7,7 @@
 }
 
 #day_1, #day_2, #day_3 {
-    width: 120px;
+    width: 160px;
     background-color: #F3FFBD;
     font-size: 15px;
     position: absolute;
@@ -19,12 +19,11 @@
 }
 
 #day_1  {
-    margin-left: 20px;
-    height: 260px;
+    margin-left: -40px;
 }
 
 #day_2  {
-    margin-left: 160px;
+    margin-left: 130px;
 }
 
 #day_3  {
@@ -63,7 +62,7 @@ body    {
     height: 400px;
     width: 500px;
     margin-left: 610px;
-    margin-top: 30px;
+    margin-top: 60px;
     border-radius: 5px;
 }
 
@@ -72,7 +71,8 @@ h1  {
     text-align: center;
     border-radius: 2px;
     width: 400px;
-    margin-left: 350px;    
+    margin-left: 350px;
+    font-size: 40px;   
 }
 
 #cityName {

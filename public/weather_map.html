@@ -6,7 +6,6 @@
 </head>
 <body>
 <h1>3-day Forecast Map</h1>
-    <button id="button1">Check Weather</button>
     <div id="map-canvas"></div>
     <div id="weather_info"></div>
     <div id="forecast_back"></div>
@@ -42,19 +41,13 @@
             // change to use without lat and lng 
             latValue = this.getPosition().lat();
             lngValue = this.getPosition().lng();
-        });
-
-// THIS IS THE BUTTTON FOR RETRIEVING COORDINATES
-
-    $("#button1").click(function () {
-        map.setCenter(marker.position);
-        var coordinates = "http://api.openweathermap.org/data/2.5/forecast?lat=" + latValue + "&lon=" + lngValue; 
-        var info = '';
-        var weather = $.get(coordinates, {
+            map.setCenter(marker.position);
+            var coordinates = "http://api.openweathermap.org/data/2.5/forecast?lat=" + latValue + "&lon=" + lngValue; 
+            var info = '';
+            var weather = $.get(coordinates, {
             APPID: "988a5fd222f83e03ba0fbb954a54524a",
             units: "imperial"
-
-        })
+            })
 
 
         weather.done(function(data){

@@ -1,8 +1,8 @@
 (function(){
 "use strict"
-    var leftInput = document.getElementById('input_a').value;
-    var rightInput = document.getElementById('input_b').value;
-    var opInput = document.getElementById('input_op').value;
+    var leftInput = "";
+    var rightInput = "";
+    var opInput = "";
     var totalInput = "0";
 
     var clear = function (event) {
@@ -29,7 +29,7 @@
                 totalInput = parseFloat(leftInput) / parseFloat(rightInput);
                 break;
             case "sqrt":
-                totalInput = Math.sqrt(leftInput);
+                totalInput = Math.sqrt(leftInput)*1;
                 break;
             case "^":
                 totalInput = Math.pow(leftInput, rightInput);
@@ -47,9 +47,6 @@
             document.getElementById('input_a').value = totalInput;
             document.getElementById('input_op').value = "";
             document.getElementById('input_b').value = "";
-            rightInput = "";
-            leftInput = totalInput;
-        
     }
 
     var header = function (event) {
@@ -66,17 +63,7 @@
         }
     }
             
-    function toggle() {
-        var ele = document.getElementById("toggleText");
-        var text = document.getElementById("bmo_round_button");
-            if(ele.style.display == "block") {
-                ele.style.display = "none";
-                text.innerHTML = "OFF";
-            } else {
-                ele.style.display = "block";
-                text.innerHTML = "ON";
-            }
-    } 
+
 
 
     var operator = function(event) {
@@ -102,7 +89,7 @@
 
     
 // -------- EVENT LISTENERS
-    document.getElementById('bmo_round_button').addEventListener('click', toggle);
+
     document.getElementById('equalsSign').addEventListener('click', equal);
     document.getElementById('equalsSign').addEventListener('mouseover', header);
     document.getElementById('clear').addEventListener('click', clear);
