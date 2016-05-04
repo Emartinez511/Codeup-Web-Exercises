@@ -1,0 +1,52 @@
+#php_header {
+    background-color: #FFEACA;
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 0;
+    padding-left: 10%;
+}
+
+
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 9%;
+    background-color: #A1AAB2;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    margin-top: 
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+body {
+    background-color: #DBEFFF;
+    margin: 0;
+    width: 100%;
+}
+.main {
+    background-color: #F4FAFF;
+    padding-left: 10%;
+}
+
+.footer {
+    background-color: #B2AA9D;
+    margin-left: 10%;
+    margin-bottom: 0;
+}

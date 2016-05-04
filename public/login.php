@@ -1,23 +1,23 @@
 <?php
-require 'functions.php';
-$message = " ";
+require_once '../input.php';
+require_once '../auth.php';
+$message = "denied";
 $_SESSION['logged_in_user'] = "";
 session_start();
 
-if (inputHas('logged_in_user')) {
-        header('Location: authorized.php');
-        die();
-}
 
-if (inputHas('username') && inputHas('password')) {
-    if (inputGet('username') == 'guest' && inputGet('password') == 'password'){
-        $_SESSION['logged_in_user'] = inputGet('username');
+$username= input::has('username') ? input::get('username'): '';
+$password= input::has('password') ? input::get('password'): '';
+
+
+    if (Auth::attempt($username, $password)){
+        $_SESSION['logged_in_user'] = input::get('username');
         header('Location: authorized.php');
         die();
     } else {
-        $message = "Denied";
+        $message = "";
     }
-};
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,7 +32,7 @@ if (inputHas('username') && inputHas('password')) {
     <input type="text" name="password"><br>
     <input type="submit">
     
-        <h1><?php echo escape($message); ?></h1>
+        <h1><?php echo $message; ?></h1>
 
 </form>
 </body>

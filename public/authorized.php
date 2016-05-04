@@ -1,11 +1,13 @@
 <?php
-require 'functions.php';
+require_once '../input.php';
+require_once '../auth.php';
 session_start();
-if ($_SESSION['logged_in_user']) {
-} else {
+
+if (Auth::check()) {
+    } else {
         header('Location: login.php');
         die();
-}
+    }
 
 ?>
 <!DOCTYPE html>

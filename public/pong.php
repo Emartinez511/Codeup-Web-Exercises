@@ -1,8 +1,7 @@
 <?php
-require 'functions.php';
+require '../input.php';
 function pageController() {
-    $count = !inputHas('count') ? 0 : inputGet('count');
-
+    $count = !input::has('count') ? 0 : input::get('count');
     return ['count' => $count];
 }
 
@@ -18,7 +17,7 @@ extract(pageController());
 </head>
 <body>
 <h1>PING PONG</h1>
-    <p>Score:<?= escape($count) ?></p>
+    <p>Score:<?= $count ?></p>
     <a href="ping.php?count=<?= $count + 1 ?>">hit</a>
     <a href="ping.php?count=<?= $count = 0 ?>">miss</a>
     <div><img src="img/willferrelltt.jpeg"></div>

@@ -1,0 +1,1 @@
+<H1 id='php_header'>THIS IS A TEMPLATE PHP WEBSITE</H1>
