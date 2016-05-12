@@ -1,4 +1,5 @@
 <?php
+require 'db_creds.php';
 
 require 'db_connect.php';
 
