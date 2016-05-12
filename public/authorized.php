@@ -3,11 +3,10 @@ require_once '../input.php';
 require_once '../auth.php';
 session_start();
 
-if (Auth::check()) {
-    } else {
-        header('Location: login.php');
-        die();
-    }
+if (!Auth::check()) {
+    header('Location: login.php');
+    die();
+}
 
 ?>
 <!DOCTYPE html>

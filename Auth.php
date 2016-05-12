@@ -5,29 +5,25 @@ Class Auth
 {
     public static $password = '$2y$10$SLjwBwdOVvnMgWxvTI4Gb.YVcmDlPTpQystHMO2Kfyi/DS8rgA0Fm';
 
-
-
     public static function attempt($username, $password)
     {
         
+        $log = new Log();
+
         if ($username == 'guest' && (password_verify($password, self::$password))){
             $_SESSION['logged_in_user'] = $username;
-            $log = new Log();
             $log->logInfo("User $username logged in.");
-            return True;
+            return true;
         }   else {
-                $logError = new Log();
-                $logError->logError("User $username failed to log in!");
-                return False;
+                $log->logError("User $username failed to log in!");
+                return false;
             };
         
     }
 
     public static function check()
     {
-        return $_SESSION['logged_in_user'];
-
-        
+        return (isset($_SESSION['logged_in_user']));
     }
 
     public static function user()
@@ -42,6 +38,5 @@ Class Auth
 
         // delete session data on the server and send the client a new cookie
         session_regenerate_id(true);
-
     }
 };

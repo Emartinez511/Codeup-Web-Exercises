@@ -1,22 +1,27 @@
 <?php
 require_once '../input.php';
 require_once '../auth.php';
-$message = "denied";
+$message = " ";
 $_SESSION['logged_in_user'] = "";
 session_start();
 
+if (auth::check()) {
+        header('Location: authorized.php');
+        die();
+};
 
 $username= input::has('username') ? input::get('username'): '';
 $password= input::has('password') ? input::get('password'): '';
 
-
+if (!empty($_POST)){
     if (Auth::attempt($username, $password)){
         $_SESSION['logged_in_user'] = input::get('username');
         header('Location: authorized.php');
         die();
     } else {
-        $message = "";
+        $message = "Denied";
     }
+};
 
 ?>
 <!DOCTYPE html>
