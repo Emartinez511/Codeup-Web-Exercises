@@ -1,0 +1,71 @@
+body {
+    /*background-image: url('/img/parkpic.jpg');*/
+    /*background-attachment: fixed;*/
+}
+
+H1 {
+    text-align: center;
+    border: 5px solid black;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+  
+}
+.header {
+    background: linear-gradient(to bottom right, grey, #696767);
+    margin-top: 0;
+    border: 3px solid #4C4B4B;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    text-align: center;
+}
+
+.rows {
+    
+    background: linear-gradient(to bottom right, white, grey);
+    float: left;
+    margin-left: 50px;
+    text-align: center;
+    width: 20%;
+    border: 3px solid black;
+    border-left: none;
+    border-top: none;
+    border-bottom-radius: 10%;
+    /*border-right: none;*/
+}
+
+.buttonL {
+    position: absolute;
+    margin-top: 400px;
+    margin-left: -400px;
+    background: linear-gradient(to bottom right, white, grey);
+    border: 3px solid black;
+    border-left: none;
+    border-top: none;
+    border-bottom-radius: 10%;
+    text-decoration: none;
+
+}
+
+.buttonR {
+    position: absolute;
+    margin-top: 400px;
+    margin-left: -200px;
+    background: linear-gradient(to bottom right, white, grey);
+    border: 3px solid black;
+    border-left: none;
+    border-top: none;
+    border-bottom-radius: 10%;
+    text-decoration: none;
+
+}
+
+.form {
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 400px;
+    width: 25%;
+
+}
+
