@@ -25,7 +25,6 @@ class User extends Model
         $lastId = self::$dbc->lastInsertId();
 
         $this->id = $lastId;
-        var_dump($this->attributes);
     }
 
     /** Update existing entry in the database */
